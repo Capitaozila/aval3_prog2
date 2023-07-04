@@ -1,2 +1,3 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# TERCEIRA PROVA DE PROG 2
+
+## EQUIPE: BRENO VASCONCELOS NASCIMENTO, LUIS HENRIQUE SOUSA BRASIL
