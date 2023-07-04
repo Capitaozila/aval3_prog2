@@ -11,12 +11,9 @@ class DNASequence {
     }
 
     final random = Random();
-    final sequence = StringBuffer();
-
-    for (int i = 0; i < length; i++) {
-      final nucleotide = _getRandomNucleotide(random);
-      sequence.write(nucleotide);
-    }
+    final nucleotides = ['A', 'T', 'C', 'G'];
+    final sequence = List.generate(
+        length, (_) => nucleotides[random.nextInt(nucleotides.length)]).join();
 
     return DNASequence._(sequence.toString());
   }
@@ -33,11 +30,6 @@ class DNASequence {
     }
 
     return _countNucleotideOccurrences(nucleotide);
-  }
-
-  static String _getRandomNucleotide(Random random) {
-    final nucleotides = ['A', 'T', 'C', 'G'];
-    return nucleotides[random.nextInt(nucleotides.length)];
   }
 
   DNASequence _createReversedSequence() {
